@@ -9,30 +9,30 @@
 
 ---
 
-## ✨ Features
+## ✨ 核心功能
 
-### 📜 Research Intelligence
-- **ArXiv Paper Tracking**: Automatically fetch and score papers by author authority, GitHub stars, and organization keywords
-- **Dual-Mode Analysis**:
-  - **📋 Referee Report**: NeurIPS-style structured review (contribution, methodology, limitations, reproducibility)
-  - **📚 Technical Deep Dive**: Learning-oriented analysis focused on "what can I learn" and "should I reproduce"
-- **Radar Channels**: Filter papers by domain (Agents, RAG, Vision, Reasoning, Safety & Alignment)
+### 📜 研究情报
+- **ArXiv 论文追踪**：自动抓取并评分，基于作者权威度、GitHub Stars 和机构关键词
+- **双模式深度解读**：
+  - **📋 评审报告**：NeurIPS 风格的结构化评审（贡献、方法论、局限性、可复现性）
+  - **📚 技术解读**：学习导向的分析，聚焦"我能学到什么"和"值不值得复现"
+- **雷达频道**：按领域筛选论文（Agents、RAG、Vision、Reasoning、Safety & Alignment）
 
-### 📣 News Aggregation
-- **Unified Feed**: Merge official blogs (OpenAI, Google AI, Anthropic) with newsletters (Ben's Bites, TLDR AI, The Batch)
-- **AI Digest**: One-click daily briefing powered by DeepSeek LLM
+### 📣 新闻聚合
+- **统一信息流**：整合官方博客（OpenAI、Google AI、Anthropic）和 AI 简报（Ben's Bites、TLDR AI、The Batch）
+- **AI 日报**：一键生成每日简报，由 DeepSeek LLM 驱动
 
-### 💬 Community Pulse
-- Track grassroots sentiment from **r/LocalLlama**, **r/MachineLearning**, **r/Singularity**, and **Hacker News**
-- Filter by source type (Reddit / HN / Forums)
+### 💬 社区脉搏
+- 追踪来自 **r/LocalLlama**、**r/MachineLearning**、**r/Singularity** 和 **Hacker News** 的社区讨论
+- 按来源类型筛选（Reddit / HN / 论坛）
 
-### 🛠️ Product Discovery
-- Real-time tracking from **Product Hunt** and **There's An AI For That**
-- Discover new AI tools as they launch
+### 🛠️ 产品发现
+- 实时追踪 **Product Hunt** 和 **There's An AI For That** 的新工具发布
+- 第一时间发现最新 AI 产品
 
-### 🎧 AI Podcasts
-- Monitor interviews from **Lex Fridman**, **Dwarkesh Patel**, **Latent Space**, **No Priors**
-- Auto-detect VIP guests from your influencer watchlist
+### 🎧 AI 播客
+- 监控 **Lex Fridman**、**Dwarkesh Patel**、**Latent Space**、**No Priors** 的访谈节目
+- 自动检测您关注的 VIP 嘉宾出场
 
 ---
 
