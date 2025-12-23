@@ -1,0 +1,118 @@
+# AI Trend Radar - Influencer & Source Configuration
+# Version 2.0 - Refactored for Content Type taxonomy
+
+# --- PEOPLE (for Hype Scoring) ---
+authors:
+  - name: "Ilya Sutskever"
+    weight: 100
+  - name: "Andrej Karpathy"
+    weight: 95
+  - name: "Yann LeCun"
+    weight: 90
+  - name: "Fei-Fei Li"
+    weight: 85
+  - name: "Ashish Vaswani"
+    weight: 85
+  - name: "Kaiming He"
+    weight: 85
+  - name: "Geoffrey Hinton"
+    weight: 80
+  - name: "Yoshua Bengio"
+    weight: 80
+  - name: "Sam Altman"
+    weight: 75
+  - name: "Demis Hassabis"
+    weight: 75
+
+organizations:
+  - name: "OpenAI"
+    weight: 90
+  - name: "Google DeepMind"
+    weight: 90
+  - name: "Anthropic"
+    weight: 85
+  - name: "Meta FAIR"
+    weight: 80
+  - name: "DeepSeek"
+    weight: 75
+  - name: "Qwen"
+    weight: 70
+
+# --- NEWS FEEDS (Official + Media + Newsletters - ALL MERGED) ---
+news_feeds:
+  # Official Blogs
+  - name: "OpenAI Blog"
+    url: "https://openai.com/blog/rss.xml"
+    type: "official"
+  - name: "Google AI"
+    url: "https://blog.google/technology/ai/rss/"
+    type: "official"
+  - name: "Anthropic"
+    url: "https://www.anthropic.com/feed"
+    type: "official"
+  - name: "Hugging Face Blog"
+    url: "https://huggingface.co/blog/feed.xml"
+    type: "official"
+  # Media & Newsletters
+  - name: "The Rundown"
+    url: "https://rss.beehiiv.com/feeds/14fa5129-2811-4649-8e10-c081e649de87"
+    type: "media"
+  - name: "Ben's Bites"
+    url: "https://bensbites.beehiiv.com/feed"
+    type: "media"
+  - name: "TLDR AI"
+    url: "https://tldr.tech/ai/feed.xml"
+    type: "media"
+  - name: "The Batch"
+    url: "https://blog.deeplearning.ai/rss.xml"
+    type: "media"
+  - name: "Import AI"
+    url: "https://importai.substack.com/feed"
+    type: "media"
+
+# --- PRODUCT SOURCES (New Tool Discovery) ---
+product_sources:
+  - name: "There's An AI For That"
+    url: "https://theresanaiforthat.com/feed/"
+  - name: "Product Hunt AI"
+    url: "https://www.producthunt.com/feed?category=Artificial-Intelligence"
+
+# --- DISCOURSE (Community Discussions) ---
+discourse_sources:
+  # Reddit & HN
+  - name: "r/LocalLlama"
+    url: "https://www.reddit.com/r/LocalLLaMA/hot.rss?limit=10"
+    type: "reddit"
+  - name: "r/MachineLearning"
+    url: "https://www.reddit.com/r/MachineLearning/hot.rss?limit=10"
+    type: "reddit"
+  - name: "r/Singularity"
+    url: "https://www.reddit.com/r/Singularity/hot.rss?limit=10"
+    type: "reddit"
+  - name: "Hacker News (AI Only)"
+    url: "https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT"
+    type: "hn"
+  # Forums (Safety/Alignment)
+  - name: "AI Alignment Forum"
+    url: "https://www.alignmentforum.org/feed.xml"
+    type: "forum"
+  - name: "LessWrong (AI)"
+    url: "https://www.lesswrong.com/feed.xml?view=curated"
+    type: "forum"
+
+# --- PODCAST SOURCES (Interviews) ---
+podcast_sources:
+  - name: "Lex Fridman Podcast"
+    url: "https://lexfridman.com/feed/podcast/"
+  - name: "Dwarkesh Podcast"
+    url: "https://feed.podbean.com/dwarkeshpatel/feed.xml"
+  - name: "Latent Space"
+    url: "https://api.substack.com/feed/podcast/1084082.rss"
+  - name: "No Priors"
+    url: "https://feeds.simplecast.com/jM7-66aM"
+  - name: "Future of Life Institute"
+    url: "https://podcast.futureoflife.org/rss"
+
+# --- DEV TOOL BLOGS (for News, not Product discovery) ---
+# These are developer-focused official blogs, should appear in News feed.
+# TODO: Integrate these into news_feeds with type: "dev_tool"

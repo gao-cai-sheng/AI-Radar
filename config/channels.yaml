@@ -1,0 +1,56 @@
+# Radar Channels Configuration
+# Define "Verticals" to track specific domains.
+
+channels:
+  - name: "Agents & Multi-Agent"
+    description: "Autonomous agents, planning, and multi-agent systems"
+    keywords: 
+      - "autonomous agent"
+      - "multi-agent"
+      - "agentic"
+      - "planning"
+      - "tool use"
+      - "reasoning"
+
+  - name: "RAG & Long Context"
+    description: "Retrieval Augmented Generation and infinite context windows"
+    keywords: 
+      - "RAG"
+      - "retrieval-augmented"
+      - "long context"
+      - "kv cache"
+      - "attention optimization"
+      - "vector db"
+
+  - name: "Vision & Multimodal"
+    description: "VLM, Image Generation, and Video understanding"
+    keywords: 
+      - "diffusion model"
+      - "text-to-image"
+      - "text-to-video"
+      - "multimodal"
+      - "vision language model"
+      - "VLM"
+
+  - name: "Safety & Alignment"
+    description: "AI Safety, Risk Assessment, and Alignment techniques"
+    keywords:
+      - "alignment"
+      - "safety"
+      - "rlhf"
+      - "constitutional ai"
+      - "jailbreak"
+      - "robustness"
+      - "risk"
+      - "audit"
+      - "red team"
+
+  - name: "Reasoning & Math"
+    description: "Chain of Thought, Math, and Logic"
+    keywords: 
+      - "chain of thought"
+      - "CoT"
+      - "GSM8K"
+      - "MATH"
+      - "reasoning"
+      - "logic"
