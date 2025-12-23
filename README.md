@@ -1,6 +1,7 @@
 # 🪐 AI Radar
 
-> **Your Unified Dashboard for AI Intelligence**  
+> **您的 AI 情报统一仪表盘 | Your Unified Dashboard for AI Intelligence**  
+> 全面的 AI 趋势追踪器，自动聚合、分析和提炼来自研究论文、行业新闻、简报、社区讨论和播客的信息。  
 > A comprehensive AI trend tracker that automatically aggregates, analyzes, and digests information from research papers, industry news, newsletters, community discussions, and podcasts.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)]()
@@ -9,127 +10,129 @@
 
 ---
 
-## ✨ 核心功能
+## ✨ 核心功能 | Features
 
-### 📜 研究情报
-- **ArXiv 论文追踪**：自动抓取并评分，基于作者权威度、GitHub Stars 和机构关键词
-- **双模式深度解读**：
-  - **📋 评审报告**：NeurIPS 风格的结构化评审（贡献、方法论、局限性、可复现性）
-  - **📚 技术解读**：学习导向的分析，聚焦"我能学到什么"和"值不值得复现"
-- **雷达频道**：按领域筛选论文（Agents、RAG、Vision、Reasoning、Safety & Alignment）
+### 📜 研究情报 | Research Intelligence
+- **ArXiv 论文追踪**：自动抓取并评分，基于作者权威度、GitHub Stars 和机构关键词  
+  **ArXiv Paper Tracking**: Automatically fetch and score papers by author authority, GitHub stars, and organization keywords
+- **双模式深度解读 | Dual-Mode Analysis**：
+  - **📋 评审报告 | Referee Report**：NeurIPS 风格的结构化评审（贡献、方法论、局限性、可复现性）  
+    NeurIPS-style structured review (contribution, methodology, limitations, reproducibility)
+  - **📚 技术解读 | Technical Deep Dive**：学习导向的分析，聚焦"我能学到什么"和"值不值得复现"  
+    Learning-oriented analysis focused on "what can I learn" and "should I reproduce"
+- **雷达频道**：按领域筛选论文（Agents、RAG、Vision、Reasoning、Safety & Alignment）  
+  **Radar Channels**: Filter papers by domain (Agents, RAG, Vision, Reasoning, Safety & Alignment)
 
-### 📣 新闻聚合
-- **统一信息流**：整合官方博客（OpenAI、Google AI、Anthropic）和 AI 简报（Ben's Bites、TLDR AI、The Batch）
-- **AI 日报**：一键生成每日简报，由 DeepSeek LLM 驱动
+### 📣 新闻聚合 | News Aggregation
+- **统一信息流**：整合官方博客（OpenAI、Google AI、Anthropic）和 AI 简报（Ben's Bites、TLDR AI、The Batch）  
+  **Unified Feed**: Merge official blogs (OpenAI, Google AI, Anthropic) with newsletters (Ben's Bites, TLDR AI, The Batch)
+- **AI 日报**：一键生成每日简报，由 DeepSeek LLM 驱动  
+  **AI Digest**: One-click daily briefing powered by DeepSeek LLM
 
-### 💬 社区脉搏
-- 追踪来自 **r/LocalLlama**、**r/MachineLearning**、**r/Singularity** 和 **Hacker News** 的社区讨论
-- 按来源类型筛选（Reddit / HN / 论坛）
+### 💬 社区脉搏 | Community Pulse
+- 追踪来自 **r/LocalLlama**、**r/MachineLearning**、**r/Singularity** 和 **Hacker News** 的社区讨论  
+  Track grassroots sentiment from **r/LocalLlama**, **r/MachineLearning**, **r/Singularity**, and **Hacker News**
+- 按来源类型筛选（Reddit / HN / 论坛）  
+  Filter by source type (Reddit / HN / Forums)
 
-### 🛠️ 产品发现
-- 实时追踪 **Product Hunt** 和 **There's An AI For That** 的新工具发布
-- 第一时间发现最新 AI 产品
+### 🛠️ 产品发现 | Product Discovery
+- 实时追踪 **Product Hunt** 和 **There's An AI For That** 的新工具发布  
+  Real-time tracking from **Product Hunt** and **There's An AI For That**
+- 第一时间发现最新 AI 产品  
+  Discover new AI tools as they launch
 
-### 🎧 AI 播客
-- 监控 **Lex Fridman**、**Dwarkesh Patel**、**Latent Space**、**No Priors** 的访谈节目
-- 自动检测您关注的 VIP 嘉宾出场
+### 🎧 AI 播客 | AI Podcasts
+- 监控 **Lex Fridman**、**Dwarkesh Patel**、**Latent Space**、**No Priors** 的访谈节目  
+  Monitor interviews from **Lex Fridman**, **Dwarkesh Patel**, **Latent Space**, **No Priors**
+- 自动检测您关注的 VIP 嘉宾出场  
+  Auto-detect VIP guests from your influencer watchlist
 
 ---
 
-## 🚀 Quick Start
+## 🚀 快速开始 | Quick Start
 
-### Prerequisites
+### 前置要求 | Prerequisites
 - Python 3.9+
-- DeepSeek API Key (for AI-powered analysis)
-- GitHub Token (optional, for better rate limits)
+- DeepSeek API Key（用于 AI 分析 | for AI-powered analysis）
+- GitHub Token（可选，提升速率限制 | optional, for better rate limits）
 
-### Installation
+### 安装 | Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/AI-Radar.git
+# 克隆仓库 | Clone the repository
+git clone https://github.com/gao-cai-sheng/AI-Radar.git
 cd AI-Radar
 
-# Create virtual environment
+# 创建虚拟环境 | Create virtual environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-# Install dependencies
+# 安装依赖 | Install dependencies
 pip install -r requirements.txt
 
-# Set up environment variables
+# 设置环境变量 | Set up environment variables
 cp .env.example .env
+# 编辑 .env 并添加您的 DEEPSEEK_API_KEY
 # Edit .env and add your DEEPSEEK_API_KEY
 ```
 
-### Run the Application
+### 运行应用 | Run the Application
 
 ```bash
 streamlit run interface/Home.py
 ```
 
+在浏览器中打开 **http://localhost:8501**  
 Open your browser at **http://localhost:8501**
 
 ---
 
-## 📁 Project Structure
+## 📁 项目结构 | Project Structure
 
 ```
 AI-Radar/
-├── config/                 # Configuration files
-│   ├── influencers.yaml   # Tracked authors, orgs, RSS feeds
-│   └── channels.yaml      # Topic channels (Agents, RAG, etc.)
+├── config/                 # 配置文件 | Configuration files
+│   ├── influencers.yaml   # 追踪的作者、机构、RSS 源
+│   └── channels.yaml      # 主题频道（Agents、RAG 等）
 ├── core/
-│   ├── miners/            # Data fetchers
-│   │   ├── arxiv_miner.py
-│   │   ├── news_miner.py
-│   │   ├── reddit_miner.py
-│   │   └── ...
-│   ├── writers/           # AI analysis engines
-│   │   ├── insight_engine.py  # Paper analysis
-│   │   └── digest_engine.py   # News summarization
-│   └── utils/             # Utilities
+│   ├── miners/            # 数据抓取器 | Data fetchers
+│   ├── writers/           # AI 分析引擎 | AI analysis engines
+│   └── utils/             # 工具函数 | Utilities
 ├── interface/
-│   ├── Home.py            # Main entry point
-│   └── pages/             # Multi-page app
-│       ├── 1_📜_Research.py
-│       ├── 2_📣_News.py
-│       ├── 3_🛠️_Products.py
-│       ├── 4_💬_Discourse.py
-│       └── 5_🎧_Podcasts.py
-├── data/                  # Cached data (gitignored)
-├── docs/                  # Documentation
+│   ├── Home.py            # 主入口 | Main entry point
+│   └── pages/             # 多页面应用 | Multi-page app
+├── data/                  # 缓存数据（已忽略）| Cached data (gitignored)
 └── requirements.txt
 ```
 
 ---
 
-## 🎯 Usage Guide
+## 🎯 使用指南 | Usage Guide
 
-### 1. Research Papers
-1. Navigate to **📜 Research**
-2. Click **"Scan ArXiv Now"** to fetch latest papers
-3. Filter by **Radar Channels** (e.g., "Safety & Alignment")
-4. For any paper, choose:
-   - **📋 评审报告**: Get a structured NeurIPS-style review
-   - **📚 技术解读**: Get a learning-focused technical breakdown
+### 1. 研究论文 | Research Papers
+1. 进入 **📜 Research** 页面
+2. 点击 **"Scan ArXiv Now"** 抓取最新论文
+3. 按 **Radar Channels** 筛选（如 "Safety & Alignment"）
+4. 对任意论文，选择：
+   - **📋 评审报告**：获取 NeurIPS 风格的结构化评审
+   - **📚 技术解读**：获取学习导向的技术分析
 
-### 2. News Digest
-1. Navigate to **📣 News**
-2. Click **"Fetch All News"**
-3. Click **"生成今日 Digest"** to get an AI-generated daily briefing
+### 2. 新闻摘要 | News Digest
+1. 进入 **📣 News** 页面
+2. 点击 **"Fetch All News"**
+3. 点击 **"生成今日 Digest"** 获取 AI 生成的每日简报
 
-### 3. Community Monitoring
-1. Navigate to **💬 Discourse**
-2. Click **"Scan Communities"**
-3. Filter by source type (Reddit / HN / Forums)
+### 3. 社区监控 | Community Monitoring
+1. 进入 **💬 Discourse** 页面
+2. 点击 **"Scan Communities"**
+3. 按来源类型筛选（Reddit / HN / Forums）
 
 ---
 
-## ⚙️ Configuration
+## ⚙️ 配置 | Configuration
 
-### Adding Influencers
-Edit `config/influencers.yaml`:
+### 添加关注的影响者 | Adding Influencers
+编辑 `config/influencers.yaml`:
 
 ```yaml
 authors:
@@ -141,8 +144,8 @@ organizations:
     weight: 85
 ```
 
-### Customizing Channels
-Edit `config/channels.yaml`:
+### 自定义频道 | Customizing Channels
+编辑 `config/channels.yaml`:
 
 ```yaml
 - name: "Your Custom Channel"
@@ -154,54 +157,40 @@ Edit `config/channels.yaml`:
 
 ---
 
-## 📊 Analysis Modes
+## 📊 分析模式 | Analysis Modes
 
-### Referee Report (Evaluation Mode)
-- **Purpose**: "Is this paper worth publishing?"
-- **Output**: Structured checklist with scores
-- **Best for**: Literature review, quick screening
+### 评审报告（评估模式）| Referee Report (Evaluation Mode)
+- **目的 | Purpose**: "这篇论文值得发表吗？" | "Is this paper worth publishing?"
+- **输出 | Output**: 结构化清单与评分 | Structured checklist with scores
+- **适用于 | Best for**: 文献综述、快速筛选 | Literature review, quick screening
 
-### Technical Learning (Implementation Mode)
-- **Purpose**: "What can I learn? Should I reproduce this?"
-- **Output**: Detailed Markdown with practical insights
-- **Best for**: Deep reading, engineering adoption
+### 技术解读（实现模式）| Technical Learning (Implementation Mode)
+- **目的 | Purpose**: "我能学到什么？值得复现吗？" | "What can I learn? Should I reproduce this?"
+- **输出 | Output**: 详细 Markdown 与实践建议 | Detailed Markdown with practical insights
+- **适用于 | Best for**: 深度阅读、工程采用 | Deep reading, engineering adoption
 
 ---
 
-## 🤝 Contributing
+## 🤝 贡献 | Contributing
 
+欢迎贡献！请随时提交 Pull Request。  
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Development Setup
-
-```bash
-# Install dev dependencies
-pip install -r requirements-dev.txt
-
-# Run tests (if available)
-pytest
-```
-
 ---
 
-## 📝 License
+## 📝 许可证 | License
 
+本项目采用 MIT 许可证。  
 This project is licensed under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 致谢 | Acknowledgments
 
-- Powered by [DeepSeek](https://www.deepseek.com/) for AI analysis
-- Built with [Streamlit](https://streamlit.io/)
-- Inspired by the need for better AI information curation
-
----
-
-## 📧 Contact
-
-For questions or feedback, please open an issue on GitHub.
+- 由 [DeepSeek](https://www.deepseek.com/) 提供 AI 分析支持 | Powered by DeepSeek for AI analysis
+- 使用 [Streamlit](https://streamlit.io/) 构建 | Built with Streamlit
+- 灵感来源于对更好的 AI 信息整理的需求 | Inspired by the need for better AI information curation
 
 ---
 
-**⭐ If you find this project useful, consider giving it a star!**
+**⭐ 如果觉得这个项目有用，请给个 Star！| If you find this project useful, consider giving it a star!**
