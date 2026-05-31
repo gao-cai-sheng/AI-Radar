@@ -1,8 +1,8 @@
-from openai import OpenAI
-import os
 import json
 from typing import Dict, Any
 from dotenv import load_dotenv
+
+from core.utils.llm_client import create_llm_client
 
 load_dotenv()
 
@@ -12,13 +12,7 @@ class InsightEngine:
     """
     
     def __init__(self):
-        self.api_key = os.getenv("DEEPSEEK_API_KEY")
-        self.base_url = "https://api.deepseek.com"
-        
-        if not self.api_key:
-            raise ValueError("DEEPSEEK_API_KEY not found in .env")
-
-        self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+        self.client, self.model = create_llm_client()
 
     def analyze_paper(self, paper: Dict[str, Any]) -> Dict[str, Any]:
         """Quick scan (unchanged)."""
@@ -38,7 +32,7 @@ class InsightEngine:
         """
         try:
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 response_format={"type": "json_object"},
                 temperature=0.3, max_tokens=300
@@ -174,7 +168,7 @@ class InsightEngine:
 
         try:
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model=self.model,
                 messages=[
                     {"role": "system", "content": "你是一位严谨的 ML Reviewer，按 NeurIPS checklist 标准输出结构化评审。"},
                     {"role": "user", "content": prompt}
@@ -241,7 +235,7 @@ class InsightEngine:
 
         try:
             response = self.client.chat.completions.create(
-                model="deepseek-chat",
+                model=self.model,
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
@@ -264,4 +258,3 @@ if __name__ == "__main__":
     }
     result = engine.deep_dive(test_paper)
     print(json.dumps(result, ensure_ascii=False, indent=2))
-

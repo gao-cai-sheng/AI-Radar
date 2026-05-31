@@ -4,9 +4,19 @@
 > 全面的 AI 趋势追踪器，自动聚合、分析和提炼来自研究论文、行业新闻、简报、社区讨论和播客的信息。  
 > A comprehensive AI trend tracker that automatically aggregates, analyzes, and digests information from research papers, industry news, newsletters, community discussions, and podcasts.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)]()
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)]()
+
+---
+
+## 🌍 项目价值 | Why This Project Matters
+
+AI research and product development move too quickly for developers to follow manually across papers, company blogs, newsletters, forums, product launches, and long-form interviews. AI Radar turns these noisy information streams into a structured intelligence workflow: it collects signals, ranks what matters, generates daily digests, and produces deeper paper reviews for technical decision-making.
+
+This project is useful for AI builders, researchers, students, and independent developers who need a reproducible way to stay current without spending hours scanning disconnected sources. It also serves as an open-source reference implementation for building domain-specific intelligence dashboards with retrieval, ranking, summarization, and LLM-powered analysis.
+
+AI 研究与产品演进速度很快，开发者很难同时跟踪论文、公司博客、简报、社区讨论、新产品发布和播客访谈。AI Radar 将这些分散的信息流整理成结构化情报工作流：自动采集信号、排序重点、生成日报，并为重要论文提供更深入的技术解读。
 
 ---
 
@@ -26,8 +36,8 @@
 ### 📣 新闻聚合 | News Aggregation
 - **统一信息流**：整合官方博客（OpenAI、Google AI、Anthropic）和 AI 简报（Ben's Bites、TLDR AI、The Batch）  
   **Unified Feed**: Merge official blogs (OpenAI, Google AI, Anthropic) with newsletters (Ben's Bites, TLDR AI, The Batch)
-- **AI 日报**：一键生成每日简报，由 DeepSeek LLM 驱动  
-  **AI Digest**: One-click daily briefing powered by DeepSeek LLM
+- **AI 日报**：一键生成每日简报，由 OpenAI-compatible LLM 层驱动
+  **AI Digest**: One-click daily briefing powered by an OpenAI-compatible LLM layer
 
 ### 💬 社区脉搏 | Community Pulse
 - 追踪来自 **r/LocalLlama**、**r/MachineLearning**、**r/Singularity** 和 **Hacker News** 的社区讨论  
@@ -53,7 +63,7 @@
 
 ### 前置要求 | Prerequisites
 - Python 3.9+
-- DeepSeek API Key（用于 AI 分析 | for AI-powered analysis）
+- LLM API Key（OpenAI API 或兼容服务，用于 AI 分析 | OpenAI API or compatible provider for AI-powered analysis）
 - GitHub Token（可选，提升速率限制 | optional, for better rate limits）
 
 ### 安装 | Installation
@@ -72,8 +82,8 @@ pip install -r requirements.txt
 
 # 设置环境变量 | Set up environment variables
 cp .env.example .env
-# 编辑 .env 并添加您的 DEEPSEEK_API_KEY
-# Edit .env and add your DEEPSEEK_API_KEY
+# 编辑 .env 并添加您的 LLM_API_KEY / OPENAI_API_KEY / DEEPSEEK_API_KEY
+# Edit .env and add your LLM_API_KEY / OPENAI_API_KEY / DEEPSEEK_API_KEY
 ```
 
 ### 运行应用 | Run the Application
@@ -131,6 +141,25 @@ AI-Radar/
 
 ## ⚙️ 配置 | Configuration
 
+### LLM Provider
+
+AI Radar uses the OpenAI Python SDK and supports OpenAI-compatible providers through environment variables. For OpenAI API usage, set:
+
+```env
+LLM_API_KEY=your_openai_api_key
+LLM_MODEL=gpt-4o-mini
+```
+
+For DeepSeek or another OpenAI-compatible provider, also set `LLM_BASE_URL`:
+
+```env
+LLM_API_KEY=your_provider_api_key
+LLM_BASE_URL=https://api.deepseek.com
+LLM_MODEL=deepseek-chat
+```
+
+The legacy `DEEPSEEK_API_KEY` variable is still supported for existing users.
+
 ### 添加关注的影响者 | Adding Influencers
 编辑 `config/influencers.yaml`:
 
@@ -180,14 +209,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 许可证 | License
 
-本项目采用 MIT 许可证。  
-This project is licensed under the MIT License.
+本项目采用 MIT 许可证，详见 [LICENSE](LICENSE)。<br>
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
 
 ---
 
 ## 🙏 致谢 | Acknowledgments
 
-- 由 [DeepSeek](https://www.deepseek.com/) 提供 AI 分析支持 | Powered by DeepSeek for AI analysis
+- 使用 OpenAI-compatible SDK 构建，可接入 OpenAI API 或兼容服务 | Built on an OpenAI-compatible SDK for OpenAI API or compatible providers
 - 使用 [Streamlit](https://streamlit.io/) 构建 | Built with Streamlit
 - 灵感来源于对更好的 AI 信息整理的需求 | Inspired by the need for better AI information curation
 

@@ -1,9 +1,8 @@
-import os
-import json
 import logging
-from typing import List, Dict, Any, Optional
-from openai import OpenAI
+from typing import List, Dict, Any
 from datetime import datetime
+
+from core.utils.llm_client import create_llm_client
 
 logger = logging.getLogger(__name__)
 
@@ -14,15 +13,7 @@ class DigestEngine:
     """
     
     def __init__(self):
-        api_key = os.getenv('DEEPSEEK_API_KEY')
-        if not api_key:
-            raise ValueError("Missing DEEPSEEK_API_KEY environment variable")
-        
-        self.client = OpenAI(
-            api_key=api_key,
-            base_url="https://api.deepseek.com"
-        )
-        self.model = "deepseek-chat"
+        self.client, self.model = create_llm_client()
     
     def generate_news_digest(self, news_items: List[Dict[str, Any]], max_items: int = 15) -> str:
         """
